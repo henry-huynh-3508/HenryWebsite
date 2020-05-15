@@ -6,7 +6,7 @@ before_script:
 deploy-functions:
   stage: deploy
   script:
-    - cd functions
+    - cd hhplatform/functions
     - npm install
     - cd ..
     - firebase deploy --only functions --token $FIREBASE_TOKEN
@@ -19,6 +19,7 @@ deploy-functions:
 prod-hosting:
   stage: deploy
   script:
+    - cd hhplatform
     - yarn
     - yarn build
     - firebase deploy --only hosting --token $FIREBASE_TOKEN
