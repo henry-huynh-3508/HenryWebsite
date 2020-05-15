@@ -1,0 +1,28 @@
+image: node:12.13.0-alpine
+
+before_script:
+  - npm i -g firebase-tools
+
+deploy-functions:
+  stage: deploy
+  script:
+    - cd functions
+    - npm install
+    - cd ..
+    - firebase deploy --only functions --token $FIREBASE_TOKEN
+  only:
+    refs:
+      - master
+    changes:
+      - functions/**/*
+
+prod-hosting:
+  stage: deploy
+  script:
+    - yarn
+    - yarn build
+    - firebase deploy --only hosting --token $FIREBASE_TOKEN
+  only:
+    - master
+  environment:
+    name: production
