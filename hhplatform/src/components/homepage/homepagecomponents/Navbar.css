@@ -14,17 +14,8 @@
   padding: 0 1rem;
 }
 .navbar__logo {
-  /* Home */
-
-  /* Black */
-
-  color: white;
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
+  margin-left: 2rem;
+  display: flex;
 }
 .spacer {
   flex: 1;

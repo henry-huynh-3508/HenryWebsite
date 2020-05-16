@@ -1,10 +1,12 @@
 import React from 'react';
 import './Navbar.css';
-
+import DrawerToggleButton from './DrawerToggleButton';
 const Navbar = (props) => (
   <header>
     <nav className="navbar__navigation">
-      <div></div>
+      <div>
+        <DrawerToggleButton></DrawerToggleButton>
+      </div>
       <div className="navbar__logo">
         <a href="/">The Logo</a>
       </div>
