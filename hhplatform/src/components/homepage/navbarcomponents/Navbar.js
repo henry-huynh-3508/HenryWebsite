@@ -31,7 +31,7 @@ const Navbar = (props) => (
       </div>
       <div className="spacer"></div>
     </nav>
-    <div className="side-drawer_line"></div>
+    <div className="navbar_line"></div>
   </header>
 );
 

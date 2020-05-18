@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from './homepagecomponents/Navbar';
-import SideDrawer from './homepagecomponents/Sidedrawer';
-import Profile from './profilecomponent/profile';
+import Navbar from './navbarcomponents/Navbar';
+import SideDrawer from './navbarcomponents/Sidedrawer';
+import Profile from './profile/profile';
+import Aboutme from './aboutme/aboutme';
 class Homepage extends React.Component {
   state = {
     sideDrawerOpen: false,
@@ -24,6 +25,7 @@ class Homepage extends React.Component {
         ></SideDrawer>
         <main style={{ marginTop: '88px' }}>
           <Profile></Profile>
+          <Aboutme></Aboutme>
         </main>
       </div>
     );
