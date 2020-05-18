@@ -1,0 +1,26 @@
+.skills_header {
+  position: relative;
+  color: black;
+
+  margin-top: 10%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+}
+.skills_text {
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  /* Black */
+
+  color: #070707;
+}

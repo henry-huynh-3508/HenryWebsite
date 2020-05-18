@@ -3,6 +3,7 @@ import Navbar from './navbarcomponents/Navbar';
 import SideDrawer from './navbarcomponents/Sidedrawer';
 import Profile from './profile/profile';
 import Aboutme from './aboutme/aboutme';
+import Skills from './skills/skills';
 import './Homepage.css';
 class Homepage extends React.Component {
   state = {
@@ -28,6 +29,7 @@ class Homepage extends React.Component {
           <div className="main-content">
             <Profile></Profile>
             <Aboutme></Aboutme>
+            <Skills></Skills>
           </div>
         </main>
       </div>
