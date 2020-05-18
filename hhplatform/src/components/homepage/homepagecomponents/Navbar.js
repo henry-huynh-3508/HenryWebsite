@@ -9,9 +9,6 @@ const Navbar = (props) => (
           click={props.drawerToggleClickHandler}
         ></DrawerToggleButton>
       </div>
-      <div className="navbar__logo">
-        <a href="/">The Logo</a>
-      </div>
       <div className="spacer"></div>
       <div className="navbar_navigation-items">
         <ul>
@@ -32,7 +29,9 @@ const Navbar = (props) => (
           </li>
         </ul>
       </div>
+      <div className="spacer"></div>
     </nav>
+    <div className="side-drawer_line"></div>
   </header>
 );
 
