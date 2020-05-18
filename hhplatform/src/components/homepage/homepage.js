@@ -3,6 +3,7 @@ import Navbar from './navbarcomponents/Navbar';
 import SideDrawer from './navbarcomponents/Sidedrawer';
 import Profile from './profile/profile';
 import Aboutme from './aboutme/aboutme';
+import './Homepage.css';
 class Homepage extends React.Component {
   state = {
     sideDrawerOpen: false,
@@ -24,8 +25,10 @@ class Homepage extends React.Component {
           drawerToggleClickHandler={this.drawerToggleClickHandler}
         ></SideDrawer>
         <main style={{ marginTop: '88px' }}>
-          <Profile></Profile>
-          <Aboutme></Aboutme>
+          <div className="main-content">
+            <Profile></Profile>
+            <Aboutme></Aboutme>
+          </div>
         </main>
       </div>
     );
