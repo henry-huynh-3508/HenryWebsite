@@ -19,7 +19,7 @@ const profile = () => {
       <img
         src={require('./profilepic.png')}
         alt="huy huynh"
-        class="center"
+        className="center"
       ></img>
     </div>
   );
