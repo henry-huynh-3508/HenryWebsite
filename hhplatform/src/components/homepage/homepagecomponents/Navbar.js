@@ -5,7 +5,9 @@ const Navbar = (props) => (
   <header>
     <nav className="navbar__navigation">
       <div>
-        <DrawerToggleButton></DrawerToggleButton>
+        <DrawerToggleButton
+          click={props.drawerToggleClickHandler}
+        ></DrawerToggleButton>
       </div>
       <div className="navbar__logo">
         <a href="/">The Logo</a>
@@ -18,6 +20,15 @@ const Navbar = (props) => (
           </li>
           <li>
             <a href="/">About me</a>
+          </li>
+          <li>
+            <a href="/">Skill</a>
+          </li>
+          <li>
+            <a href="/">Portfolio</a>
+          </li>
+          <li>
+            <a href="/">Contacts</a>
           </li>
         </ul>
       </div>
