@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './homepagecomponents/Navbar';
 import SideDrawer from './homepagecomponents/Sidedrawer';
+import Profile from './profilecomponent/profile';
 class Homepage extends React.Component {
   state = {
     sideDrawerOpen: false,
@@ -22,7 +23,7 @@ class Homepage extends React.Component {
           drawerToggleClickHandler={this.drawerToggleClickHandler}
         ></SideDrawer>
         <main style={{ marginTop: '88px' }}>
-          <p>This is a test</p>
+          <Profile></Profile>
         </main>
       </div>
     );

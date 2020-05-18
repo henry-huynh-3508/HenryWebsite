@@ -28,10 +28,10 @@ const SideDrawer = (props) => {
         <li>
           <a href="/">Contacts</a>
         </li>
-        <li>
-          <div className="languages">VIETNAMESE | ENGLISH</div>
-        </li>
       </ul>
+      <div className="languages">
+        VIETNAMESE | <b>ENGLISH</b>
+      </div>
     </nav>
   );
 };
