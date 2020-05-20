@@ -17,7 +17,7 @@ const skills = [
   },
   {
     photo: PUBLIC_STATIC + '/static/techimages/react.png',
-    skill: 'react',
+    skill: 'React',
     efficiency: 4,
   },
   {
@@ -32,7 +32,7 @@ const skills = [
   },
   {
     photo: PUBLIC_STATIC + '/static/techimages/flask.png',
-    skill: 'flask',
+    skill: 'Flask',
     efficiency: 4,
   },
   {

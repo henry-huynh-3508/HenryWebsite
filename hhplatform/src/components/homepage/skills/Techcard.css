@@ -49,15 +49,16 @@
 .techcard-media {
   height: 140px;
   align-content: center;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20%;
+
   display: flex;
 }
 .root {
   position: relative;
-  max-width: 200px;
+  width: 100%;
+  max-width: 220px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

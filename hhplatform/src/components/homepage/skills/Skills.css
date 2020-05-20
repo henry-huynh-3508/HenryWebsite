@@ -24,3 +24,19 @@
 
   color: #070707;
 }
+.skills_cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.spacer {
+  flex: 1;
+}
+.techcard {
+  align-items: center;
+  align-content: center;
+}

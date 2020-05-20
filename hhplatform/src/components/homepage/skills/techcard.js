@@ -4,18 +4,16 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import skillsets from './skillsets';
 import Stars from './stars';
 import './Techcard.css';
 
 const Techcard = (props) => {
-  //const url = props.link;
   return (
     <Card className="root">
       <CardActionArea>
         <CardMedia
           className="techcard-media"
-          image={skillsets[2].photo}
+          image={props.photo}
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -25,9 +23,9 @@ const Techcard = (props) => {
             variant="h5"
             component="h2"
           >
-            {skillsets[2].skill}
+            {props.skill}
           </Typography>
-          <Stars stars={4}></Stars>
+          <Stars stars={props.stars}></Stars>
         </CardContent>
       </CardActionArea>
     </Card>
