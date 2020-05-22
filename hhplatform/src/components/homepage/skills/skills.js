@@ -7,8 +7,8 @@ import Techcard from './techcard';
 import Grid from '@material-ui/core/Grid';
 
 const Skills = () => {
-  const skillsetcomponents = skillsets.map((skill) => (
-    <Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
+  const skillsetcomponents = skillsets.map((skill, index) => (
+    <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index}>
       <Techcard
         className="techcard"
         photo={skill.photo}
@@ -18,7 +18,7 @@ const Skills = () => {
     </Grid>
   ));
   return (
-    <div>
+    <div key="2323">
       <header className="skills_header">Skills</header>
       <div className="skills_text">
         <p>I am highly efficient with these tech stacks</p>

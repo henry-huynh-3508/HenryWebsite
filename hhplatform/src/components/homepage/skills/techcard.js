@@ -9,13 +9,9 @@ import './Techcard.css';
 
 const Techcard = (props) => {
   return (
-    <Card className="root">
+    <Card className="root" key="123">
       <CardActionArea>
-        <CardMedia
-          className="techcard-media"
-          image={props.photo}
-          title="Contemplative Reptile"
-        />
+        <CardMedia className="techcard-media" image={props.photo} />
         <CardContent>
           <Typography
             gutterBottom

@@ -4,7 +4,9 @@ import SideDrawer from './navbarcomponents/Sidedrawer';
 import Profile from './profile/profile';
 import Aboutme from './aboutme/aboutme';
 import Skills from './skills/skills';
+import Portfolio from './portfolio/portfolio';
 import './Homepage.css';
+import { Container, Divider } from '@material-ui/core';
 class Homepage extends React.Component {
   state = {
     sideDrawerOpen: false,
@@ -30,6 +32,9 @@ class Homepage extends React.Component {
             <Profile></Profile>
             <Aboutme></Aboutme>
             <Skills></Skills>
+            <div className="spacer-for-skils"></div>
+            <Divider></Divider>
+            <Portfolio></Portfolio>
           </div>
         </main>
       </div>

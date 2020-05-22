@@ -4,10 +4,14 @@ import Star from '@material-ui/icons/Star';
 import './stars.css';
 const Stars = (props) => {
   return (
-    <div>
+    <div key="2323">
       <div className="star">
-        {Array(props.stars).fill(<Star />)}
-        {Array(5 - props.stars).fill(<StarBorderIcon />)}
+        {Array.from({ length: props.stars }, (item, index) => (
+          <Star key={index}></Star>
+        ))}
+        {Array.from({ length: 5 - props.stars }, (item, index) => (
+          <StarBorderIcon key={index} />
+        ))}
       </div>
     </div>
   );

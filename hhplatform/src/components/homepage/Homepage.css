@@ -1,3 +1,7 @@
 .main-content {
   overflow: auto;
 }
+.spacer-for-skils {
+  height: 100px;
+  color: transparent;
+}
