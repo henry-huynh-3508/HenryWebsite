@@ -33,7 +33,6 @@ class Homepage extends React.Component {
             <Aboutme></Aboutme>
             <Skills></Skills>
             <div className="spacer-for-skils"></div>
-            <Divider></Divider>
             <Portfolio></Portfolio>
           </div>
         </main>
