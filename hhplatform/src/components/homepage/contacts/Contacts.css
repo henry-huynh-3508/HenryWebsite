@@ -1,0 +1,53 @@
+.contacts {
+  color: white;
+}
+.contacts_header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+
+  /* Black */
+
+  color: #070707;
+}
+.contacts_image {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.contacts_title {
+  display: block;
+  margin-top: 1%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration-line: underline;
+
+  /* Black */
+
+  color: #070707;
+}
+
+.contacts_text {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  /* Black */
+
+  color: #070707;
+}
