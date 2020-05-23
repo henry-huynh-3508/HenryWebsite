@@ -13,7 +13,7 @@ const Navbar = (props) => (
       <div className="navbar_navigation-items">
         <ul>
           <li>
-            <a href="#profile">About me</a>
+            <a href="#aboutme">About me</a>
           </li>
           <li>
             <a href="#skills">Skills</a>

@@ -5,8 +5,9 @@
   height: 100px;
   color: transparent;
 }
-a.anchor {
+.anchor {
   display: block;
   position: relative;
   margin-top: 0;
+  text-decoration: none;
 }

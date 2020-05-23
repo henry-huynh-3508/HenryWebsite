@@ -5,7 +5,7 @@ const profile = () => {
     <div>
       <div className="profile">
         <p className="name">Huy Huynh</p>
-        <p className="summary">
+        <p className="profile_summary">
           <b>
             TechLead | Full Stack Developer| DevOps Engineer| Data Analyst |
             Edmonton, AB, Canada

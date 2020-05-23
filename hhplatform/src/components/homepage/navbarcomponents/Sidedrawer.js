@@ -14,16 +14,24 @@ const SideDrawer = (props) => {
       ></DrawerCloseButton>
       <ul>
         <li>
-          <a href="#profile">About me</a>
+          <a href="#aboutme" onClick={props.drawerToggleClickHandler}>
+            About me
+          </a>
         </li>
         <li>
-          <a href="#skills">Skills</a>
+          <a href="#skills" onClick={props.drawerToggleClickHandler}>
+            Skills
+          </a>
         </li>
         <li>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#portfolio" onClick={props.drawerToggleClickHandler}>
+            Portfolio
+          </a>
         </li>
         <li>
-          <a href="#contacts">Contacts</a>
+          <a href="#contacts" onClick={props.drawerToggleClickHandler}>
+            Contacts
+          </a>
         </li>
       </ul>
       <div className="languages">
