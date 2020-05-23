@@ -3,7 +3,6 @@ import './Portfolio.css';
 const PUBLIC_STATIC = process.env.PUBLIC_URL;
 export default class Portfolio extends Component {
   render() {
-    console.log(PUBLIC_STATIC);
     return (
       <div>
         <header className="portfolio_header">Portfolio</header>
@@ -28,7 +27,7 @@ export default class Portfolio extends Component {
           listings across entire Canada. I take pride in building the entire
           platform from the ground up with my team.
         </p>
-
+        <div className="spacer"></div>
         <a
           className="portfolio_title"
           href="https://my.visme.co/projects/w4yjkry6-starcraft-survey-general-report"

@@ -14,19 +14,16 @@ const SideDrawer = (props) => {
       ></DrawerCloseButton>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="#profile">About me</a>
         </li>
         <li>
-          <a href="/">About me</a>
+          <a href="#skills">Skills</a>
         </li>
         <li>
-          <a href="/">Skill</a>
+          <a href="#portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="/">Portfolio</a>
-        </li>
-        <li>
-          <a href="/">Contacts</a>
+          <a href="#contacts">Contacts</a>
         </li>
       </ul>
       <div className="languages">
