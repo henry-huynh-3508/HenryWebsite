@@ -29,12 +29,21 @@ class Homepage extends React.Component {
         ></SideDrawer>
         <main style={{ marginTop: '88px' }}>
           <div className="main-content">
-            <Profile></Profile>
-            <Aboutme></Aboutme>
-            <Skills></Skills>
+            <a class="anchor" id="profile">
+              <Profile></Profile>
+            </a>
+            <a class="anchor" id="aboutme">
+              <Aboutme></Aboutme>
+            </a>
+            <a class="anchor" id="skills">
+              <Skills></Skills>
+            </a>
             <div className="spacer-for-skils"></div>
-            <Portfolio></Portfolio>
+            <a class="anchor" id="portfolio">
+              <Portfolio></Portfolio>
+            </a>
             <div className="spacer-for-skils"></div>
+            <a class="anchor" id="contacts"></a>
             <Contacts></Contacts>
             <div className="spacer-for-skils"></div>
           </div>
