@@ -6,7 +6,7 @@ import Aboutme from './aboutme/aboutme';
 import Skills from './skills/skills';
 import Portfolio from './portfolio/portfolio';
 import './Homepage.css';
-import { Container, Divider } from '@material-ui/core';
+import Contacts from './contacts/contacts';
 class Homepage extends React.Component {
   state = {
     sideDrawerOpen: false,
@@ -34,6 +34,9 @@ class Homepage extends React.Component {
             <Skills></Skills>
             <div className="spacer-for-skils"></div>
             <Portfolio></Portfolio>
+            <div className="spacer-for-skils"></div>
+            <Contacts></Contacts>
+            <div className="spacer-for-skils"></div>
           </div>
         </main>
       </div>

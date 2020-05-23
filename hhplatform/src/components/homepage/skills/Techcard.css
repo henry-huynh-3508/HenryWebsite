@@ -54,6 +54,8 @@
   margin-top: 20%;
 
   display: flex;
+
+  overflow: hidden;
 }
 .root {
   position: relative;
@@ -61,4 +63,8 @@
   max-width: 220px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
