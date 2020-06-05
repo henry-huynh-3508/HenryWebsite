@@ -76,8 +76,23 @@ const skills = [
     efficiency: 4,
   },
   {
+    photo: PUBLIC_STATIC + '/static/techimages/postgres.png',
+    skill: 'PostgrSQL',
+    efficiency: 4,
+  },
+  {
+    photo: PUBLIC_STATIC + '/static/techimages/mysql.png',
+    skill: 'MySQL',
+    efficiency: 4,
+  },
+  {
     photo: PUBLIC_STATIC + '/static/techimages/go.png',
     skill: 'Go',
+    efficiency: 3,
+  },
+  {
+    photo: PUBLIC_STATIC + '/static/techimages/nestjs.svg',
+    skill: 'NestJS',
     efficiency: 3,
   },
   {
