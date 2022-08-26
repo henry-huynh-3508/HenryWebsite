@@ -117,11 +117,11 @@ function MenuDesktopItem({
   onOpen,
   onClose,
 }: MenuDesktopItemProps) {
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
 
   const { title, path, children } = item;
 
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => asPath === path;
 
   if (children) {
     return (
@@ -248,8 +248,8 @@ function MenuDesktopItem({
     <NextLink href={path} passHref>
       <LinkStyle
         sx={{
-          ...(isHome && { color: 'primary.main' }),
-          ...(isOffset && { color: 'primary.main' }),
+          ...(isHome && { color: 'common.white' }),
+          ...(isOffset && { color: 'common.white' }),
           ...(isActive(path) && {
             color: 'primary.main',
           }),

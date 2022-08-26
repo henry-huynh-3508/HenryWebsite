@@ -12,22 +12,22 @@ const menuConfig = [
   {
     title: 'About',
     icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
-    path: '#about',
+    path: '/#about',
   },
   {
     title: 'Skills',
     icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
-    path: '#skills',
+    path: '/#skills',
   },
   {
     title: 'Work',
-    path: '#work',
+    path: '/#work',
     icon: <Iconify icon={'eva:file-fill'} {...ICON_SIZE} />,
   },
   {
     title: 'Contact',
     icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
-    path: '#contact',
+    path: '/#contact',
   },
 ];
 
