@@ -48,12 +48,6 @@ export default function HomePage() {
         <HomeColorPresets />
 
         <HomeCleanInterfaces />
-
-        <HomePricingPlans />
-
-        <HomeLookingFor />
-
-        <HomeAdvertisement />
       </ContentStyle>
     </Page>
   );

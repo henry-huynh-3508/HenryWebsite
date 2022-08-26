@@ -1,7 +1,7 @@
 import { m } from 'framer-motion';
 // @mui
 import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Box, Card, Container, Typography } from '@mui/material';
+import { Box, Card, Container, Typography, Link, Stack } from '@mui/material';
 // components
 import Image from '../../components/Image';
 import { MotionViewport, varFade } from '../../components/animate';
@@ -18,16 +18,19 @@ const CARDS = [
   {
     icon: 'https://minimal-assets-api-dev.vercel.app/assets/icons/ic_code.svg',
     title: 'Development',
-    description: 'Easy to customize and extend each component, saving you time and money.',
+    description:
+      'Easy to customize and extend each component, saving you time and money.',
   },
   {
     icon: '/logo/logo_single.svg',
     title: 'Branding',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    description:
+      'Consistent design in colors, fonts ... makes brand recognition easy.',
   },
 ];
 
-const shadowIcon = (color: string) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
+const shadowIcon = (color: string) =>
+  `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
@@ -52,7 +55,8 @@ const CardStyle = styled(Card)(({ theme }) => {
     boxShadow: theme.customShadows.z12,
     [theme.breakpoints.up('md')]: {
       boxShadow: 'none',
-      backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
+      backgroundColor:
+        theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
     },
     '&.cardLeft': {
       [theme.breakpoints.up('md')]: { marginTop: -40 },
@@ -87,38 +91,74 @@ const CardStyle = styled(Card)(({ theme }) => {
 export default function HomeMinimal() {
   const theme = useTheme();
 
-  const isLight = theme.palette.mode === 'light';
-
   return (
     <RootStyle>
-      <Container component={MotionViewport}>
-        <Box
-          sx={{
-            textAlign: 'center',
-            mb: { xs: 10, md: 25 },
-          }}
-        >
-          <m.div variants={varFade().inUp}>
-            <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
-              Minimal
-            </Typography>
-          </m.div>
-          <m.div variants={varFade().inDown}>
-            <Typography variant="h2">What minimal helps you?</Typography>
-          </m.div>
-        </Box>
+      <Container component={MotionViewport} id="about">
+        <Stack alignItems="center">
+          <Box
+            sx={{
+              textAlign: 'center',
+              mb: { xs: 10, md: 10 },
+              maxWidth: '800px',
+            }}
+          >
+            <m.div variants={varFade().inUp}>
+              <Typography
+                component="div"
+                variant="overline"
+                sx={{ mb: 2, color: 'text.disabled' }}
+              >
+                About me
+              </Typography>
+            </m.div>
+            <m.div variants={varFade().inDown}>
+              <Typography>
+                I'm Henry Huynh - Technical Manager at{' '}
+                <Link href="https://www.oakandfort.com/" target="_blank">
+                  Oak + Fort
+                </Link>{' '}
+                and recently CEO/Founder at{' '}
+                <Link href="https://www.innolandsolutions.com/" target="_blank">
+                  Innoland Solutions.
+                </Link>
+                <br />
+                <br />
+                I've worked in software engineering for my entire 10-year
+                career, and my commitment to integrity and project management
+                have gotten me to where I am today: a technical manager for Oak
+                + Fort.
+                <br />
+                <br />
+                I have a passion for processes, and I'm an experienced team
+                leader who typically manages small-to-medium-size developers at
+                any given time. Prior to my senior role, I worked as a full
+                stack software engineer for Revere Technologies Company and S&T
+                Properties.
+                <br />
+                <br />
+                Because I've already held all the other positions in this field,
+                I have keen insight into what it takes to run a successful
+                project. My career goal is to move into management as a CTO, and
+                I know this role would help me hone my leadership skills.
+              </Typography>
+            </m.div>
+          </Box>
+        </Stack>
 
-        <Box
+        <Card
           sx={{
             display: 'grid',
             gap: { xs: 5, lg: 10 },
-            gridTemplateColumns: { xs: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' },
           }}
         >
-          {CARDS.map((card, index) => (
+          {/* {CARDS.map((card, index) => (
             <m.div variants={varFade().inUp} key={card.title}>
               <CardStyle
-                className={(index === 0 && 'cardLeft') || (index === 1 && 'cardCenter') || ''}
+                className={
+                  (index === 0 && 'cardLeft') ||
+                  (index === 1 && 'cardCenter') ||
+                  ''
+                }
               >
                 <Image
                   src={card.icon}
@@ -140,13 +180,16 @@ export default function HomeMinimal() {
                 <Typography variant="h5" paragraph>
                   {card.title}
                 </Typography>
-                <Typography sx={{ color: isLight ? 'text.secondary' : 'common.white' }}>
+                <Typography
+                  sx={{ color: isLight ? 'text.secondary' : 'common.white' }}
+                >
                   {card.description}
                 </Typography>
               </CardStyle>
             </m.div>
-          ))}
-        </Box>
+          ))} */}
+          <Image src="/assets/henry.png" alt="henry" />
+        </Card>
       </Container>
     </RootStyle>
   );
