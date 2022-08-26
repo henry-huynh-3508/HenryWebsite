@@ -191,3 +191,5 @@ service-key-production.json
 *-keys.json
 *prod
 keys/
+
+.next
