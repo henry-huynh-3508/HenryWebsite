@@ -2,12 +2,20 @@ import { ReactNode } from 'react';
 // next
 import { useRouter } from 'next/router';
 // @mui
-import { Box, Link, Container, Typography, Stack } from '@mui/material';
+import {
+  Box,
+  Link,
+  Container,
+  Typography,
+  Stack,
+  IconButton,
+} from '@mui/material';
 // components
 import Logo from '../../components/Logo';
 //
 import MainFooter from './MainFooter';
 import MainHeader from './MainHeader';
+import { GitHub, LinkedIn } from '@mui/icons-material';
 
 // ----------------------------------------------------------------------
 
@@ -46,6 +54,23 @@ export default function MainLayout({ children }: Props) {
               © All rights reserved
               <br /> made by &nbsp;
               <Link>Henry</Link>
+            </Typography>
+
+            <Typography>
+              <IconButton
+                href="https://www.linkedin.com/in/hh-techlead/"
+                target="_blank"
+                color="primary"
+              >
+                <LinkedIn />
+              </IconButton>
+              <IconButton
+                href="https://github.com/henry-huynh-3508"
+                target="_blank"
+                color="primary"
+              >
+                <GitHub />
+              </IconButton>
             </Typography>
           </Container>
         </Box>

@@ -2,7 +2,13 @@ import { ReactNode } from 'react';
 import { IconifyIcon } from '@iconify/react';
 // @mui
 import { useTheme, styled } from '@mui/material/styles';
-import { Box, BoxProps, Stack, StackProps, IconButtonProps } from '@mui/material';
+import {
+  Box,
+  BoxProps,
+  Stack,
+  StackProps,
+  IconButtonProps,
+} from '@mui/material';
 //
 import Iconify from '../Iconify';
 import { IconButtonAnimate } from '../animate';
@@ -26,17 +32,17 @@ const ArrowStyle = styled(IconButtonAnimate, {
   alignItems: 'center',
   justifyContent: 'center',
   '&:hover': {
-    color: theme.palette.text.primary,
+    color: theme.palette.primary.main,
   },
   ...(filled && {
     opacity: 0.48,
     borderRadius: Number(theme.shape.borderRadius) * 1.5,
     color: theme.palette.common.white,
-    backgroundColor: theme.palette.grey[900],
+    backgroundColor: theme.palette.primary.main,
     '&:hover': {
       opacity: 1,
       color: theme.palette.common.white,
-      backgroundColor: theme.palette.grey[900],
+      backgroundColor: theme.palette.primary.main,
     },
   }),
 }));

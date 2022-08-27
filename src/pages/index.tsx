@@ -7,15 +7,11 @@ import Page from '../components/Page';
 // sections
 import {
   HomeHero,
-  HomeMinimal,
-  HomeDarkMode,
-  HomeLookingFor,
-  HomeColorPresets,
-  HomePricingPlans,
-  HomeAdvertisement,
-  HomeCleanInterfaces,
-  HomeHugePackElements,
+  HomeAboutMe,
+  HomeContact,
+  HomeExperience,
 } from '../sections/home';
+import HomeFeatureProjects from 'src/sections/home/HomeFeatureProjects';
 
 // ----------------------------------------------------------------------
 
@@ -39,13 +35,13 @@ export default function HomePage() {
       <HomeHero />
 
       <ContentStyle>
-        <HomeMinimal />
+        <HomeAboutMe />
 
-        <HomeHugePackElements />
+        <HomeExperience />
 
-        <HomeColorPresets />
+        <HomeFeatureProjects />
 
-        <HomeCleanInterfaces />
+        <HomeContact />
       </ContentStyle>
     </Page>
   );
