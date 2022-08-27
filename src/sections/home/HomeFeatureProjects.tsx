@@ -35,7 +35,7 @@ const featureProjects = [
   {
     name: 'Revere Technologies',
     description:
-      'Custom Software Development: Schedule, manage and pay your cleaners with an all-in-one solutions',
+      'Revere Technologies Platform is a fully functional real estate platform that allows users to post their own listings for advertisement. The platform currently is hosting more than 300,000 listings across entire Canada. I take pride in building the entire platform from the ground up with my team.',
     image: 'assets/featureprojects/revere.png',
     link: 'https://revere-tech.com/',
   },
