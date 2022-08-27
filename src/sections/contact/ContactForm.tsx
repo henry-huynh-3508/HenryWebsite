@@ -6,7 +6,7 @@ import { Button, TextField, Stack } from '@mui/material';
 import { MotionViewport, varFade } from '../../components/animate';
 import { Form, FormikProvider, useFormik } from 'formik';
 import * as Yup from 'yup';
-// import { sendMessage } from '../../firebase';
+import { sendMessage } from '../../../firebase';
 
 // ----------------------------------------------------------------------
 
@@ -26,10 +26,10 @@ export default function ContactForm() {
     onSubmit: async (values, { setErrors, setSubmitting }) => {
       const { name, email, subject, message } = values;
       try {
-        // await sendMessage({ name, email, subject, message }).then(() => {
-        formik.resetForm();
-        alert('Submitted successfully');
-        // });
+        await sendMessage({ name, email, subject, message }).then(() => {
+          formik.resetForm();
+          alert('Submitted successfully');
+        });
       } catch (error) {
         console.error(error);
         setErrors(error);
