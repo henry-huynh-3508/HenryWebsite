@@ -3,17 +3,10 @@ import { m } from 'framer-motion';
 import { alpha, styled } from '@mui/material/styles';
 import { Box, Container, Typography, useTheme } from '@mui/material';
 // components
-import Image from '../../components/Image';
 import { MotionViewport, varFade } from '../../components/animate';
+import { ContactForm } from '../contact';
 
 // ----------------------------------------------------------------------
-
-const IMG = [...Array(10)].map(
-  (_, index) =>
-    `https://minimal-assets-api-dev.vercel.app/assets/images/home/clean-${
-      index + 1
-    }.png`
-);
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
@@ -40,7 +33,7 @@ export default function HomeCleanInterfaces() {
 
   return (
     <RootStyle>
-      <Container component={MotionViewport}>
+      <Container component={MotionViewport} id="contact">
         <ContentStyle>
           <m.div variants={varFade().inUp}>
             <Typography
@@ -67,7 +60,9 @@ export default function HomeCleanInterfaces() {
             </Typography>
           </m.div>
 
-          <Box>Hi</Box>
+          <Box>
+            <ContactForm />
+          </Box>
         </ContentStyle>
       </Container>
     </RootStyle>
