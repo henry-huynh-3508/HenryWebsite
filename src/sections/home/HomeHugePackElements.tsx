@@ -1,10 +1,30 @@
 import { m } from 'framer-motion';
 // @mui
-import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Box, Grid, Button, Container, Typography } from '@mui/material';
+import { useTheme, styled } from '@mui/material/styles';
+import {
+  Box,
+  Grid,
+  Container,
+  Typography,
+  Card,
+  CardHeader,
+  CardContent,
+  CardProps,
+  Link,
+  Button,
+  ClickAwayListener,
+} from '@mui/material';
+import {
+  Timeline,
+  TimelineDot,
+  TimelineItem,
+  TimelineContent,
+  TimelineSeparator,
+  TimelineConnector,
+} from '@mui/lab';
 // components
-import Image from '../../components/Image';
 import { MotionViewport, varFade } from '../../components/animate';
+import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
@@ -22,50 +42,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
   },
 }));
 
-const ScreenStyle = styled(m.div)(({ theme }) => ({
-  paddingRight: 2,
-  paddingBottom: 1,
-  maxWidth: 160,
-  borderRadius: 8,
-  backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
-  [theme.breakpoints.up('sm')]: {
-    maxWidth: 320,
-    paddingRight: 4,
-    borderRadius: 12,
-  },
-  '& img': {
-    borderRadius: 8,
-    [theme.breakpoints.up('sm')]: {
-      borderRadius: 12,
-    },
-  },
-}));
-
-const COMMON = {
-  scaleX: 0.86,
-  skewY: 8,
-  skewX: 0,
-  scaleY: 1,
-  translateX: 0,
-  translateY: 0,
-  opacity: 0,
-};
-
-const variantScreenLeft = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 },
-};
-
-const variantScreenCenter = {
-  initial: COMMON,
-  animate: { ...COMMON, opacity: 1 },
-};
-
-const variantScreenRight = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 },
-};
-
 // ----------------------------------------------------------------------
 
 export default function HomeHugePackElements() {
@@ -73,20 +49,17 @@ export default function HomeHugePackElements() {
 
   const isLight = theme.palette.mode === 'light';
 
-  const isRTL = theme.direction === 'rtl';
-
-  const screenLeftAnimate = variantScreenLeft;
-
-  const screenCenterAnimate = variantScreenCenter;
-
-  const screenRightAnimate = variantScreenRight;
-
   return (
     <MotionViewport disableAnimatedMobile={false}>
-      <RootStyle>
+      <RootStyle id="experience">
         <Container>
           <Grid container spacing={5} justifyContent="center">
-            <Grid item xs={12} md={4} sx={{ display: 'flex', alignItems: 'center' }}>
+            <Grid
+              item
+              xs={12}
+              md={4}
+              sx={{ display: 'flex', alignItems: 'center' }}
+            >
               <ContentStyle>
                 <m.div variants={varFade().inUp}>
                   <Typography
@@ -94,14 +67,14 @@ export default function HomeHugePackElements() {
                     variant="overline"
                     sx={{ mb: 2, color: 'text.disabled' }}
                   >
-                    Interface Starter Kit
+                    Experience
                   </Typography>
                 </m.div>
 
                 <m.div variants={varFade().inUp}>
                   <Typography variant="h2" sx={{ mb: 3 }}>
-                    Huge pack <br />
-                    of elements
+                    Experience <br />
+                    Diversity
                   </Typography>
                 </m.div>
 
@@ -112,22 +85,9 @@ export default function HomeHugePackElements() {
                       color: isLight ? 'text.secondary' : 'common.white',
                     }}
                   >
-                    We collected most popular elements. Menu, sliders, buttons, inputs etc. are all
-                    here. Just dive in!
+                    With years of experience in the industry, I have come
+                    through a long way to become a Technical Lead as of today.
                   </Typography>
-                </m.div>
-
-                <m.div variants={varFade().inUp}>
-                  <Button
-                    size="large"
-                    color="inherit"
-                    variant="outlined"
-                    target="_blank"
-                    rel="noopener"
-                    href="https://www.minimals.cc/components/"
-                  >
-                    View All Components
-                  </Button>
                 </m.div>
               </ContentStyle>
             </Grid>
@@ -141,41 +101,7 @@ export default function HomeHugePackElements() {
                   justifyContent: 'center',
                 }}
               >
-                {[...Array(3)].map((_, index) => (
-                  <ScreenStyle
-                    key={index}
-                    variants={{
-                      ...(index === 0 && screenLeftAnimate),
-                      ...(index === 1 && screenCenterAnimate),
-                      ...(index === 2 && screenRightAnimate),
-                    }}
-                    transition={{ duration: 0.72, ease: 'easeOut' }}
-                    sx={{
-                      boxShadow: `${isRTL ? -80 : 80}px -40px 80px ${alpha(
-                        isLight ? theme.palette.grey[600] : theme.palette.common.black,
-                        0.48
-                      )}`,
-                      ...(index === 0 && {
-                        zIndex: 3,
-                        position: 'absolute',
-                      }),
-                      ...(index === 1 && { zIndex: 2 }),
-                      ...(index === 2 && {
-                        zIndex: 1,
-                        position: 'absolute',
-                        boxShadow: 'none',
-                      }),
-                    }}
-                  >
-                    <Image
-                      disabledEffect
-                      alt={`screen ${index + 1}`}
-                      src={`https://minimal-assets-api-dev.vercel.app/assets/images/home/screen_${
-                        isLight ? 'light' : 'dark'
-                      }_${index + 1}.png`}
-                    />
-                  </ScreenStyle>
-                ))}
+                <ExperienceTimeline title="Experience" list={experienceList} />
               </Box>
             </Grid>
           </Grid>
@@ -184,3 +110,140 @@ export default function HomeHugePackElements() {
     </MotionViewport>
   );
 }
+
+type ItemProps = {
+  id: number;
+  title: string;
+  time: string;
+  company: string;
+  companyLink: string;
+  description: string;
+};
+
+interface Props extends CardProps {
+  title?: string;
+  subheader?: string;
+  list: ItemProps[];
+}
+
+function ExperienceTimeline({ title, subheader, list, ...other }: Props) {
+  return (
+    <Card {...other} sx={{ width: '700px' }}>
+      <CardHeader title={title} subheader={subheader} />
+
+      <CardContent
+        sx={{
+          '& .MuiTimelineItem-missingOppositeContent:before': {
+            display: 'none',
+          },
+        }}
+      >
+        <Timeline>
+          {list.map((item, index) => (
+            <OrderItem
+              key={item.id}
+              item={item}
+              isLast={index === list.length - 1}
+            />
+          ))}
+        </Timeline>
+      </CardContent>
+    </Card>
+  );
+}
+
+// ----------------------------------------------------------------------
+
+type OrderItemProps = {
+  item: ItemProps;
+  isLast: boolean;
+};
+
+function OrderItem({ item, isLast }: OrderItemProps) {
+  const { id, title, time, company, description, companyLink } = item;
+
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen((pre) => !pre);
+  };
+  const handleClickAway = () => {
+    setOpen(false);
+  };
+  return (
+    <TimelineItem>
+      <TimelineSeparator>
+        <TimelineDot
+          color={
+            (id === 0 && 'primary') ||
+            (id === 1 && 'success') ||
+            (id === 2 && 'info') ||
+            (id === 3 && 'warning') ||
+            'error'
+          }
+        />
+        {isLast ? null : <TimelineConnector />}
+      </TimelineSeparator>
+
+      <TimelineContent>
+        <Typography variant="subtitle1">
+          {title} @{' '}
+          <Link href={companyLink} target="_blank">
+            {company}
+          </Link>
+        </Typography>
+
+        <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+          {time}
+        </Typography>
+
+        <br />
+        <ClickAwayListener onClickAway={handleClickAway}>
+          <m.div variants={varFade().inUp}>
+            {!open && (
+              <Button variant="outlined" onClick={handleClickOpen}>
+                Show more
+              </Button>
+            )}
+
+            {open && <Typography variant="subtitle2">{description}</Typography>}
+          </m.div>
+        </ClickAwayListener>
+      </TimelineContent>
+    </TimelineItem>
+  );
+}
+
+const experienceList: ItemProps[] = [
+  {
+    id: 0,
+    title: 'Tech Lead',
+    time: 'May 2022 - Present',
+    company: 'Oak + Fort',
+    description: 'hehe',
+    companyLink: 'https://www.oakandfort.com/',
+  },
+  {
+    id: 1,
+    title: 'Tech Lead',
+    time: 'Nov 2021 - Present',
+    company: 'S&T Properties',
+    description: '',
+    companyLink: 'https://stproperties.com/',
+  },
+  {
+    id: 2,
+    title: 'Tech Lead',
+    time: 'Mar 2019 - Oct 2021',
+    company: 'Revere Technologies',
+    description: '',
+    companyLink: 'https://revere-tech.com/',
+  },
+  {
+    id: 3,
+    title: 'Backend Engineer',
+    time: 'Jul 2018 - Mar 2019',
+    company: 'Oak + Fort',
+    description: '',
+    companyLink: 'https://revere-tech.com/',
+  },
+];

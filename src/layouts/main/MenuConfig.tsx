@@ -15,9 +15,9 @@ const menuConfig = [
     path: '/#about',
   },
   {
-    title: 'Skills',
+    title: 'Experience',
     icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
-    path: '/#skills',
+    path: '/#experience',
   },
   {
     title: 'Work',

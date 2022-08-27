@@ -10,7 +10,9 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 const IMG = [...Array(10)].map(
   (_, index) =>
-    `https://minimal-assets-api-dev.vercel.app/assets/images/home/clean-${index + 1}.png`
+    `https://minimal-assets-api-dev.vercel.app/assets/images/home/clean-${
+      index + 1
+    }.png`
 );
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -41,8 +43,12 @@ export default function HomeCleanInterfaces() {
       <Container component={MotionViewport}>
         <ContentStyle>
           <m.div variants={varFade().inUp}>
-            <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
-              clean & clear
+            <Typography
+              component="div"
+              variant="overline"
+              sx={{ mb: 2, color: 'text.disabled' }}
+            >
+              Contact
             </Typography>
           </m.div>
 
@@ -52,40 +58,17 @@ export default function HomeCleanInterfaces() {
               paragraph
               sx={{
                 ...(!isLight && {
-                  textShadow: (theme) => `4px 4px 16px ${alpha(theme.palette.grey[800], 0.48)}`,
+                  textShadow: (theme) =>
+                    `4px 4px 16px ${alpha(theme.palette.grey[800], 0.48)}`,
                 }),
               }}
             >
-              Beautiful, modern and clean user interfaces
+              Get in touch with me, my inbox is always open!
             </Typography>
           </m.div>
-        </ContentStyle>
 
-        <Box sx={{ position: 'relative' }}>
-          {IMG.map((_, index) => (
-            <Box
-              key={index}
-              component={m.div}
-              variants={varFade().inUp}
-              sx={{
-                top: 0,
-                left: 0,
-                position: 'absolute',
-                ...(index === 0 && { zIndex: 8 }),
-                ...(index === 9 && { position: 'relative', zIndex: 9 }),
-              }}
-            >
-              <Image
-                disabledEffect
-                visibleByDefault
-                alt={`clean-${index + 1}`}
-                src={`https://minimal-assets-api-dev.vercel.app/assets/images/home/clean-${
-                  index + 1
-                }.png`}
-              />
-            </Box>
-          ))}
-        </Box>
+          <Box>Hi</Box>
+        </ContentStyle>
       </Container>
     </RootStyle>
   );
