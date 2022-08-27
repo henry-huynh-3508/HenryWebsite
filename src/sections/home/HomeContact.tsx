@@ -1,7 +1,7 @@
 import { m } from 'framer-motion';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Container, Stack, Typography, useTheme } from '@mui/material';
 // components
 import { MotionViewport, varFade } from '../../components/animate';
 import { ContactForm } from '../contact';
@@ -13,15 +13,10 @@ const RootStyle = styled('div')(({ theme }) => ({
   paddingBottom: theme.spacing(10),
 }));
 
-const ContentStyle = styled('div')(({ theme }) => ({
+const ContentStyle = styled(Stack)(({ theme }) => ({
   maxWidth: 520,
   margin: 'auto',
-  textAlign: 'center',
-  [theme.breakpoints.up('md')]: {
-    zIndex: 11,
-    textAlign: 'left',
-    position: 'absolute',
-  },
+  textAlign: 'left',
 }));
 
 // ----------------------------------------------------------------------
