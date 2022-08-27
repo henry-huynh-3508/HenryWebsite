@@ -96,9 +96,7 @@ export default function HomeHero() {
           <ContentStyle>
             <m.div variants={varFade().inRight}>
               <Typography variant="h1" sx={{ color: 'common.white' }}>
-                Hi, buddy
-                <br />
-                my name is <br />
+                Hi, I'm <br />
                 <Typography
                   component="span"
                   variant="h1"

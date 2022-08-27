@@ -21,24 +21,20 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/favicon/favicon.ico"
-          />
+          <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo.svg" />
 
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/favicon/favicon.ico"
+            href="/logo/logo.svg"
           />
 
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/favicon/favicon.ico"
+            href="/logo/logo.svg"
           />
 
           <meta name="theme-color" content={palette.light.primary.main} />

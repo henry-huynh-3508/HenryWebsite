@@ -72,7 +72,7 @@ export default function InvoiceDetails({ invoice }: Props) {
               disabledEffect
               visibleByDefault
               alt="logo"
-              src="/logo/logo.png"
+              src="/logo/logo.svg"
               sx={{ maxWidth: 120 }}
             />
           </Grid>
